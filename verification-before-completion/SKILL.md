@@ -123,7 +123,7 @@ Skip any step = lying, not verifying
 
 When checking the whole task against AGENTS.md before submission, do not grade your own work:
 
-1. Spawn one subagent. Brief it to read AGENTS.md, run each verification command exactly as written, check each completion criterion against the files and command output, and report pass or fail per item with the output.
+1. Spawn one subagent without the parent conversation (in Codex, set `fork_turns` to `"none"`), so it judges only from the files and command output. Brief it to read AGENTS.md, run each verification command exactly as written, check each completion criterion against the files and command output, and report pass or fail per item with the output.
 2. Tell it not to edit files and not to build new verification tools.
 3. Wait for its report. Fix what failed, rerun only the failed items' commands yourself, and show their output.
 
