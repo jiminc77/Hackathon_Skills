@@ -22,7 +22,7 @@ A decision that lives only in chat does not exist for the next session or for th
 
 ## What each file contains
 
-1. `AGENTS.md`, 50 lines or fewer: a one-sentence goal, completion criteria as a checkable list, constraints and things not to do, verification commands that can be copied and run as is, verification scope, security rules (secrets and personal data), and language. Put this sentence in the verification scope verbatim: "Verify with the commands and completion criteria above. Before building a new verification tool, such as a fuzzer, mutation testing or reruns across versions, ask the user." Copy the three lines under "Language" above into the language section verbatim.
+1. `AGENTS.md`, 50 lines or fewer: a one-sentence goal, completion criteria as a checkable list, constraints and things not to do, verification commands that can be copied and run as is, verification scope, security rules (secrets and personal data), and language. Put this sentence in the verification scope verbatim: "Verify with the commands and completion criteria above. Before building a new verification tool, such as a fuzzer, mutation testing or reruns across versions, ask the user." Copy the three lines under "Language" above into the language section verbatim. AGENTS.md describes the whole task and what the finished deliverable must satisfy, not the current request: leave completion criteria unchecked until the deliverable meets them, and do not add constraints that apply only to the current request.
 2. `DECISIONS.md`: add four lines per decision in the format below. Never delete earlier entries; when a decision is reversed, add a new entry that names the old number.
    ```
    ## D<n>. <decision in one line>
@@ -39,7 +39,7 @@ A decision that lives only in chat does not exist for the next session or for th
 - When listing unconfirmed decisions in HANDOFF.md's open questions or in a summary such as a README, do not write from memory. Run `grep '^## D.*[(]UNCONFIRMED[)]' DECISIONS.md` and copy the entry numbers it prints; if it prints nothing, say there are none.
 - Each line of DECISIONS.md and HANDOFF.md holds at most two sentences, so a person can read and explain them without AI.
 - Do not repeat what the code or git log already shows.
-- Commit document updates together with the related code.
+- Commit after each update of these files; when a code change goes with them, commit both together.
 
 ## Resuming
 

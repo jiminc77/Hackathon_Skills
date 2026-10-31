@@ -121,10 +121,10 @@ Skip any step = lying, not verifying
 
 ## Final Completion Check (added in this repo, not in upstream)
 
-When checking the whole task against AGENTS.md before submission, do not grade your own work:
+Only when the user explicitly asks for the final check before submission (for example "final check" or "최종 점검"), do not grade your own work:
 
 1. Spawn one subagent without the parent conversation (in Codex, set `fork_turns` to `"none"`), so it judges only from the files and command output. Brief it to read AGENTS.md, run each verification command exactly as written, check each completion criterion against the files and command output, and report pass or fail per item with the output.
 2. Tell it not to edit files and not to build new verification tools.
 3. Wait for its report. Fix what failed, rerun only the failed items' commands yourself, and show their output.
 
-Use one subagent, and only for this final check.
+For every other verification, including checks after each unit of work and document updates, run the commands yourself and do not spawn a subagent.
